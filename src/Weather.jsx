@@ -33,6 +33,10 @@ export default function Weather() {
       <button type="submit">Search</button>
     </form>
   );
+  
+  let footer = (
+    <p>This project is coded by <a href="#">Phillipa</a>and is{""}<a href="https://github.com/Phillipa2/React-GitHub-Netlify-Project">open-sourced on GitHub</a>{""}and{""}<a href="https://inquisitive-quokka-6ef83d.netlify.app/">hosted on Netlify</a>.</p>
+  )
   if (loaded) {
     return (
       <div className="App">
@@ -46,10 +50,14 @@ export default function Weather() {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
+         {footer}
       </div>
     );
   } else {
-    return <div className="App">{form}</div>;
+    return <div className="App">
+      {form}
+      {footer}
+      </div>;
   }
-  <p>This project is coded by <a href="#">Phillipa</a>and is <a href="https://github.com/Phillipa2/React-GitHub-Netlify-Project">open-sourced on GitHub</a>and<a href="https://inquisitive-quokka-6ef83d.netlify.app/">hosted on Netlify</a>.</p>
+  
 }
